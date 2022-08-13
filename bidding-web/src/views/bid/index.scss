@@ -1,0 +1,8 @@
+.bid-container {
+  @include page-main;
+
+  // 招标项目列表
+  .bid-main {
+    @include main-wapper(0);
+  }
+}

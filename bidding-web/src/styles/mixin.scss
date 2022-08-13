@@ -1,0 +1,42 @@
+@mixin line-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin page-main {
+  min-height: calc(100vh - 200px);
+  padding-top: 60px;
+}
+
+// 多行文本超过行数显示省略号
+@mixin text-overflow($line:1) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+// 主体基本样式
+@mixin main-wapper($tb:40px) {
+  width: 1200px;
+  margin: $tb auto;
+}
+
+// flex布局
+@mixin flex-layout($dir:column,$justify:center,$align:center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+// 水平垂直居中
+@mixin center-xy($width: auto,$pos: absolute, $top: 50%, $left: 50%,$trans:translate(-50%, -50%)) {
+  width: $width;
+  position: $pos;
+  top: $top;
+  left: $left;
+  transform: $trans;
+}

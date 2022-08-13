@@ -1,0 +1,91 @@
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+
+  .logo {
+    position: absolute;
+    height: 59px;
+    z-index: 120;
+  }
+
+  .menu-dark-bg {
+    background: linear-gradient(rgba(0, 0, 100, 0.4), rgba(0, 0, 100, 0));
+
+    .el-menu-item {
+      color: #fff !important;
+      border-bottom: none;
+    }
+
+    .el-menu-item.is-active {
+      border-bottom: none;
+    }
+  }
+
+  .el-menu {
+    width: 100%;
+    justify-content: right;
+    padding: 0 25px;
+    border-bottom: none;
+  }
+
+  .choose-lang-title {
+    font-size: 22px;
+    color: #222;
+    font-weight: inherit;
+    margin: 0;
+  }
+
+  .choose-lang-container {
+    border-top: 1px solid rgb(235, 235, 235);
+    padding: 0 20px;
+  }
+
+  .lang-list {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .lang-list-item {
+      width: 24%;
+      height: 56px;
+      padding: 8px 15px;
+      vertical-align: top;
+      border-radius: 8px;
+      margin-top: 12px;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+
+      .lang-name {
+        color: #222;
+      }
+
+      .lang-country {
+        color: #717171;
+      }
+    }
+
+    .choose-lang-active {
+      border: 1px solid $aoColor2;
+    }
+  }
+
+  :deep(.el-dialog__body) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  :deep(.el-dialog) {
+    border-radius: 8px;
+  }
+
+  :deep(.el-dialog__header) {
+    height: 40px;
+  }
+}
