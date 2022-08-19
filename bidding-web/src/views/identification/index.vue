@@ -2,7 +2,7 @@
   <com-header/>
 
   <div class="ident-container">
-    <title-header title="完善资料" hidden="false"/>
+    <title-header title="完善资料"  />
 
     <section class="warn-cell">
       <el-alert title="请务必按照营业执照登记的信息填写" type="warning" show-icon :closable="false" />

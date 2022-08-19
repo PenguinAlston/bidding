@@ -1,47 +1,8 @@
-import { defineComponent, PropType } from 'vue'
-import router from '../../router'
-import styles from './index.module.scss'
+<template>
+    <div class="bid-card">
+        <div @click=""><h3 class="card-header">{props.title}</h3></div>
 
-export default defineComponent({
-  name: 'BidCard',
-
-  props: {
-    title: {
-      type: String as PropType<string>,
-      required: true
-    },
-    no: {
-      type: String as PropType<string>,
-      required: false
-    },
-    bidType: {
-      type: String as PropType<string>,
-      required: false
-    },
-    pushTime: {
-      type: String as PropType<string>,
-      required: true
-    },
-    endTime: {
-      type: String as PropType<string>,
-      required: true
-    },
-    num: {
-      type: String as PropType<string>,
-      required: false
-    },
-    maxPrice: {
-      type: String as PropType<string>,
-      required: false
-    }
-  }, 
-
-  setup(props, { slots }) {
-    return () => {
-      return <div class={styles['bid-card']}>
-        <div  ><h3 class={styles['card-header']}>{props.title}</h3></div>
-
-        <div class={styles['card-body']}>
+        <div class="'card-body">
           {
             props.no
               ? <el-row style="margin: 3px 0;">
@@ -84,10 +45,17 @@ export default defineComponent({
           }
         </div>
 
-        <div class={styles['card-footer']}>
+        <div class="card-footer">
           {slots.default && slots.default()}
         </div>
       </div>
-    }
-  }
-})
+</template>
+
+<script setup lang="ts"> 
+    
+     
+
+</script>
+<style scoped lang="scss">
+@import "index.module.scss" 
+</style>

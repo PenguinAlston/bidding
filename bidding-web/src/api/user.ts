@@ -37,3 +37,9 @@ export const logoutApi = () => request({
   url: '/user/logout',
   method: 'POST'
 })
+
+//更新用户信息
+export const updateUserInfoApi =(data: object) =>({
+  url: '/pub/passport/update',
+  method: 'POST'
+})

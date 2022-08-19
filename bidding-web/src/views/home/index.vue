@@ -51,8 +51,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ComHeader from '@/components/header/index.vue'
-import ComFooter from '../../components/footer/'
-import NotifyCard from '../../components/notify-card/'
+import ComFooter from '../../components/footer/index'
+import NotifyCard from '../../components/notify-card/index'
 import TitleHeader from '../../components/title-header/'
 import BidCard from '../../components/bid-card/'
 

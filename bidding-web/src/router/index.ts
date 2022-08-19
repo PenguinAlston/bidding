@@ -31,7 +31,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/bid',
     name: 'Bid',
-    component: () => import('@/views/bid/index.vue'),
+    component: () => import('@/views/bid/index.vue'), 
     meta: {
       title: '采购公示-招投标平台',
       keepAlive: false
